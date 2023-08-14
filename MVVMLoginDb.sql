@@ -12,9 +12,8 @@ create table [User]
 	Email  nvarchar (100) unique not null
 )
 go
-insert into [User] values (NEWID(), 'admin', 'admin','RJ Code','Advance', 'rjcode@gmail.com')
-insert into [User] values (NEWID(), 'jazz', 'qwerty','Jazzlyn Yarely','Sebhant', 'jazz.m@gmail.com')
-insert into [User] values (NEWID(), 'keni', 'asdfg','Kenisha Aira','Montero', 'keni.m@gmail.com')
+insert into [User] values (NEWID(), 'admin', 'admin','Aminul Islam,'Niloy', 'admin@gmail.com')
+
 go
 
 select *from [User]
