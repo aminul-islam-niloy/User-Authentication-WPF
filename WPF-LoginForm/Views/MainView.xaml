@@ -48,7 +48,7 @@
                     Grid.Column="0">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
-                            <GradientStop Color="{StaticResource primaryBackColor1}" Offset="0"/>
+                            <GradientStop Color="{StaticResource primaryBackColor1}" Offset="0.52"/>
                             <GradientStop Color="{StaticResource primaryBackColor2}" Offset="1"/>
                         </LinearGradientBrush>
                     </Border.Background>
@@ -57,11 +57,12 @@
 
          
                         <StackPanel Orientation="Horizontal"
-                                Height="35"
-                                Margin="15,25,0,40">
+                                Height="55"
+                                Margin="30,25,0,40">
 
                             <Image Source="/Images/sunset_sun_sunshine_sunrise_weather_icon_194245.png" Height="30"/>
-                            <TextBlock Text="Organic Options"
+                            <TextBlock Text="Organic Op
+                                       "
                                    Foreground="{StaticResource titleColor2}"
                                    FontSize="20"
                                    FontFamily="Montserrat"
@@ -164,8 +165,8 @@
                     Grid.Column="1">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
-                            <GradientStop Color="{StaticResource winBorderColor1}" Offset="0.96"/>
-                            <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0.566"/>
+                            <GradientStop Color="{StaticResource winBorderColor1}" Offset="1"/>
+                            <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
                         </LinearGradientBrush>
                     </Border.Background>
 
