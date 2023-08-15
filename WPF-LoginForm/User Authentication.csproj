@@ -101,9 +101,6 @@
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\OrderView.xaml.cs">
-      <DependentUpon>OrderView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\TransitionView.xaml.cs">
       <DependentUpon>TransitionView.xaml</DependentUpon>
     </Compile>
@@ -132,10 +129,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\OrderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Lorem ipsum dolor sit ... %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Readme\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
