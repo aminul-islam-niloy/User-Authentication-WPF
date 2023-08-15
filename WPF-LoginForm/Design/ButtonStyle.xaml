@@ -93,7 +93,7 @@
     <Style x:Key="iconButton" TargetType="Button">
         <!--Normal button style-->
         <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Width" Value="45"/>
+        <Setter Property="Width" Value="25"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{StaticResource plainTextColor1}"/>
         <Setter Property="Template">
