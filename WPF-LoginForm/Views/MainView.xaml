@@ -49,7 +49,7 @@
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
                             <GradientStop Color="{StaticResource primaryBackColor1}" Offset="0.52"/>
-                            <GradientStop Color="{StaticResource primaryBackColor2}" Offset="1"/>
+                            <GradientStop Color="{StaticResource primaryBackColor1}" Offset="1"/>
                         </LinearGradientBrush>
                     </Border.Background>
 
@@ -73,11 +73,12 @@
                         
                         <!--menu-->
 
-                     
+
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color1}"
-                                 IsChecked="True"
+                                      IsChecked="True"
                                  Command="{Binding ShowHomeViewCommand}">
+
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}"/>
@@ -85,9 +86,8 @@
                         </RadioButton>
 
                         <RadioButton Style="{StaticResource menuButton}"
-                                 Tag="{StaticResource color2}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 Tag="{StaticResource color9}"
+                               >
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Customer" Style="{StaticResource menuButtonText}"/>
@@ -96,8 +96,7 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color3}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 >
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="Truck" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Order" Style="{StaticResource menuButtonText}"/>
@@ -106,8 +105,7 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color4}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                               >
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="ShoppingBag" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Transiton" Style="{StaticResource menuButtonText}"/>
@@ -116,8 +114,7 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color5}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                >
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="Box" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Stock" Style="{StaticResource menuButtonText}"/>
@@ -126,8 +123,7 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color7}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 >
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="BusinessTime" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Business" Style="{StaticResource menuButtonText}"/>
@@ -136,8 +132,7 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color6}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                >
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="PieChart" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Report" Style="{StaticResource menuButtonText}"/>
@@ -146,13 +141,22 @@
 
                         <RadioButton Style="{StaticResource menuButton}"
                                  Tag="{StaticResource color8}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                >
                             <StackPanel Orientation="Horizontal">
                                 <fa:IconImage Icon="Tools" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="Settings" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color9}"
+                                >
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="User" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Developer" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
 
 
 
@@ -165,8 +169,8 @@
                     Grid.Column="1">
                     <Border.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
-                            <GradientStop Color="{StaticResource winBorderColor1}" Offset="1"/>
-                            <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
+                            <GradientStop Color="{StaticResource winBorderColor1}" Offset="0"/>
+                            <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="1"/>
                         </LinearGradientBrush>
                     </Border.Background>
 
@@ -183,17 +187,37 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                            
-                                <!--Control bar-->
+                        
+                                <!--Control bar header minimize and maximize button-->
                             <StackPanel x:Name="pnlControlBar"
                                 Grid.Row="0"
                                 Orientation="Horizontal"
                                 FlowDirection="RightToLeft"
                                 Background="Transparent"
-                                Margin="0,0,5,0"
-                                MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown"
-                               >
+                                Margin="0,5,0,0"
+                                MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
 
-                            </StackPanel>
+                            <Button x:Name="btnClose"
+                                Style="{StaticResource controlButton}"
+                                Tag="{StaticResource color4}"
+                                Click="btnClose_Click">
+                                <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
+                            </Button>
+                            <Button x:Name="btnMaximize"
+                                Style="{StaticResource controlButton}"
+                                Tag="{StaticResource color6}"
+                                Click="btnMaximize_Click">
+                                <fa:IconImage Icon="Square" Style="{StaticResource controlButtonIcon}"/>
+                            </Button>
+                            <Button x:Name="btnMinimize"
+                                Style="{StaticResource controlButton}"
+                                Tag="{StaticResource color8}"
+                                Click="btnMinimize_Click">
+                                <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
+                            </Button>
+                                
+                                
+                        </StackPanel>
                         </Grid> 
                 </Border>
 
